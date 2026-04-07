@@ -22,8 +22,6 @@ requirements:
     - {{ posix }}git
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
-
-requirements:
   host:
     - r-base
     - r-loader.java        ==1.2.2
@@ -47,7 +45,7 @@ requirements:
     - r-climate4r.datasets ==0.0.1
     - r-c4r-calibrator     ==0.2.0
     - r-climate4r.hub      ==0.0.1
-  run: 
+  run:
     - r-base
     - r-loader.java        ==1.2.2
     - r-transformer        ==2.2.2
