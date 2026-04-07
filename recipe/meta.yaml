@@ -1,4 +1,4 @@
-{% set version = "2.7.3" %}
+{% set version = "2.7.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/SantanderMetGroup/climate4r-meta/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 294bd0b12616e0179204e963a3eb5a63a7a87f80b8746d6f92f560cba9b210ff
+  sha256: 78ea73429e7c9d903a2e172267c5d7b1ae669465e8f89aa8471e2ba384ce3212
 
 build:
   number: 0
@@ -22,11 +22,9 @@ requirements:
     - {{ posix }}git
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
-
-requirements:
   host:
     - r-base
-    - r-loader.java        ==1.2.1
+    - r-loader.java        ==1.2.2
     - r-transformer        ==2.2.2
     - r-climate4r.udg      ==0.2.6
     - r-loader.2nc         ==0.1.3
@@ -47,9 +45,9 @@ requirements:
     - r-climate4r.datasets ==0.0.1
     - r-c4r-calibrator     ==0.2.0
     - r-climate4r.hub      ==0.0.1
-  run: 
+  run:
     - r-base
-    - r-loader.java        ==1.2.1
+    - r-loader.java        ==1.2.2
     - r-transformer        ==2.2.2
     - r-climate4r.udg      ==0.2.6
     - r-loader.2nc         ==0.1.3
@@ -89,4 +87,4 @@ extra:
   recipe-maintainers:
     - conda-forge/r
     - cofinoa
-    - mor427unican
+    - mariadlor
